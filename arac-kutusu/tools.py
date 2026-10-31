@@ -23,3 +23,18 @@ def is_palindrome(word:str) ->bool:
     clean=word.lower()
     return clean==clean[::-1]
 
+def is_pwd_strong(password: str) -> bool:
+    """Parola güçlü mü? ör. is_pwd_strong('hsdANKARA06') -> True, is_pwd_strong('abc123') -> False"""
+    if len(password) < 8:
+        return False
+
+    has_upper = False
+    has_number = False
+
+    for char in password:
+        if char.isupper():
+            has_upper = True
+        elif char.isdigit():
+            has_number = True
+
+    return has_upper and has_number
