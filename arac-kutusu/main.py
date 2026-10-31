@@ -6,3 +6,5 @@ print(tools.greet("Araç Kutusu"))
 
 print("count_vowels('merhaba') ->"
       , tools.count_vowels("merhaba"))
+print("is_palindrome('kayak) -> ",
+      tools.is_palindrome("kayak"))

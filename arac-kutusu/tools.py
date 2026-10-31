@@ -9,6 +9,7 @@ def greet(name: str) -> str:
     return f"Merhaba, {name}!"
 
 
+
 def count_vowels(text:str) -> int:
     """Metindeki sesli harflerin sayısını döndürür. Örnek: count_vowels('Merhaba') → 3"""
     count = 0
@@ -16,3 +17,9 @@ def count_vowels(text:str) -> int:
         if letter in "aeiıoöuü":
             count += 1
     return count        
+
+def is_palindrome(word:str) ->bool:
+    """Kelime tersten de aynı mı okunuyor? ör. is_palindrome('kek') → True, is_palindrome('elma') → False"""
+    clean=word.lower()
+    return clean==clean[::-1]
+
