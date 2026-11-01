@@ -23,3 +23,12 @@ def is_palindrome(word:str) ->bool:
     clean=word.lower()
     return clean==clean[::-1]
 
+def is_prime(number:int) -> bool:
+    """checking whether the entered number is prime. Ex: is_prime(4) -> False, is_prime(5) -> True"""
+    if number <= 1:
+        return False
+
+    for i in range(2,int(number**0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
