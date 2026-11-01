@@ -23,6 +23,22 @@ def is_palindrome(word:str) ->bool:
     clean=word.lower()
     return clean==clean[::-1]
 
+def is_pwd_strong(password: str) -> bool:
+    """Parola güçlü mü? ör. is_pwd_strong('hsdANKARA06') -> True, is_pwd_strong('abc123') -> False"""
+    if len(password) < 8:
+        return False
+
+    has_upper = False
+    has_number = False
+
+    for char in password:
+        if char.isupper():
+            has_upper = True
+        elif char.isdigit():
+            has_number = True
+
+    return has_upper and has_number
+
 def is_leap_year(year: int) -> bool:
     # is_leap_year: yil artik yil mi? (2024 → True, 1900 → False)
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
@@ -31,4 +47,3 @@ def reverse_words(metin:str) ->str:
     """kelimelerin sırasını ters çevirir (bugün hava güzel → güzel hava bugün)"""
     return ' '.join(metin.split()[::-1])#.join() metodu ile ters çevrilmiş kelimeleri birleştiriyoruz.
     #.split() metodu ile metni kelimelere ayırıyoruz ve [::-1] ile ters çeviriyoruz.
-   
