@@ -23,3 +23,11 @@ def is_palindrome(word:str) ->bool:
     clean=word.lower()
     return clean==clean[::-1]
 
+def factorial(number:int) ->int:
+    """Girilen sayının faktöriyelini hesaplar. Örnek: 4! =24"""
+    factorial_1=1
+    for i in range(1,number+1):
+        factorial_1*=i
+    return factorial_1
+    
+
