@@ -23,3 +23,7 @@ def is_palindrome(word:str) ->bool:
     clean=word.lower()
     return clean==clean[::-1]
 
+def is_leap_year(year: int) -> bool:
+    # is_leap_year: yil artik yil mi? (2024 → True, 1900 → False)
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+    
