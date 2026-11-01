@@ -8,3 +8,5 @@ print("count_vowels('merhaba') ->"
       , tools.count_vowels("merhaba"))
 print("is_palindrome('kayak) -> ",
       tools.is_palindrome("kayak"))
+
+print("longest_word('en uzun kelimeli cümle')->",tools.longest_word("en uzun kelimeli cümle"))

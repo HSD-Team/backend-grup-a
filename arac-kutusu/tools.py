@@ -23,3 +23,8 @@ def is_palindrome(word:str) ->bool:
     clean=word.lower()
     return clean==clean[::-1]
 
+def longest_word(sentence:str)->str:
+    """Cümledeki en uzun kelimeyi döndürür. Örnek longest_word('en uzun kelime')-> kelime"""
+    words=sentence.split()
+    max_word=  max(words,key=len)
+    return max_word
