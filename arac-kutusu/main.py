@@ -14,3 +14,5 @@ print("is_leap_year(2100) ->"
       , tools.is_leap_year(2100))
 
 print("reverse_words('bugün hava güzel') ->", tools.reverse_words("bugün hava güzel"))
+
+print("fibonacci(15) -> ", tools.fibonacci(15))

@@ -47,3 +47,11 @@ def reverse_words(metin:str) ->str:
     """kelimelerin sırasını ters çevirir (bugün hava güzel → güzel hava bugün)"""
     return ' '.join(metin.split()[::-1])#.join() metodu ile ters çevrilmiş kelimeleri birleştiriyoruz.
     #.split() metodu ile metni kelimelere ayırıyoruz ve [::-1] ile ters çeviriyoruz.
+
+def fibonacci(n:int) -> int:
+    """returns the nth number in the fibonacci sequence."""
+    s=[0,1,1,0]
+    for i in range(0,n):
+        s[3] = s[1] + s[2]
+        s[0:3] = s[1:4]
+    return s[0]
