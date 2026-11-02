@@ -23,6 +23,14 @@ def is_palindrome(word:str) ->bool:
     clean=word.lower()
     return clean==clean[::-1]
 
+def factorial(number:int) ->int:
+    """Girilen sayının faktöriyelini hesaplar. Örnek: 4! =24"""
+    factorial_1=1
+    for i in range(1,number+1):
+        factorial_1*=i
+    return factorial_1
+    
+
 def is_pwd_strong(password: str) -> bool:
     """Parola güçlü mü? ör. is_pwd_strong('hsdANKARA06') -> True, is_pwd_strong('abc123') -> False"""
     if len(password) < 8:
